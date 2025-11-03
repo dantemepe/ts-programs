@@ -12,7 +12,7 @@ turtle.speed(0)
 size = input("How many circles do you want to be in the image? (1k+ reccomended)(can lag a lot if the amount inputted is higher than 10k)  > ")
 x = 0
 z = 0
-dp=0
+dp = 0
 while True:
     turtle.circle(x)
     turtle.left(math.pi)
