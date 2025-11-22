@@ -5,3 +5,4 @@ x ahora tengo(en orden de creacion):
   - coso que genera circulos re fumados (creado el 2/11⁓)
   - resolutor de rectas numericas (creado el 2/11)
   - conversor de unidades (creado el 2/11 junto al resolutor previamente mencionado)
+  - coso para hacer numeros factoriales (22/11)
