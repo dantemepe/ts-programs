@@ -1,4 +1,3 @@
-# Excited print statement about coding on Android
 print("finally, a fuckin app that lets me code on android!!!")
 
 # Import system module for exit functions and time module for delays
