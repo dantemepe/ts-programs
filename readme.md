@@ -6,3 +6,4 @@ x ahora tengo(en orden de creacion):
   - resolutor de rectas numericas (creado el 2/11)
   - conversor de unidades (creado el 2/11 junto al resolutor previamente mencionado)
   - coso para hacer numeros factoriales (22/11)
+  - maquina tragamonedas de apostar con random.randint (6/12)
