@@ -7,3 +7,4 @@ x ahora tengo(en orden de creacion):
   - conversor de unidades (creado el 2/11 junto al resolutor previamente mencionado)
   - coso para hacer numeros factoriales (22/11)
   - maquina tragamonedas de apostar con random.randint (6/12)
+  - remake de mi calculadora(creado el 23/12)
