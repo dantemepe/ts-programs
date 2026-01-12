@@ -37,18 +37,28 @@ def install_ffmpeg():
             set_progress(percent)
             print(f"\rFFmpeg {percent:.1f}%", end="", flush=True)
 
-    with zipfile.ZipFile(zip_path) as z:
-        z.extractall(extract_dir)
+    try:
+        with zipfile.ZipFile(zip_path) as z:
+            z.extractall(extract_dir)
 
-    for root, _, files in os.walk(extract_dir):
-        if "ffmpeg.exe" in files:
-            os.makedirs(FFMPEG_DIR, exist_ok=True)
-            shutil.copy(os.path.join(root, "ffmpeg.exe"), FFMPEG_EXE)
-            shutil.copy(os.path.join(root, "ffprobe.exe"), FFMPEG_DIR)
-            break
+        for root, _, files in os.walk(extract_dir):
+            if "ffmpeg.exe" in files:
+                os.makedirs(FFMPEG_DIR, exist_ok=True)
+                shutil.copy(os.path.join(root, "ffmpeg.exe"), FFMPEG_EXE)
+                shutil.copy(os.path.join(root, "ffprobe.exe"), FFMPEG_DIR)
+                break
 
-    shutil.rmtree(extract_dir)
-    os.remove(zip_path)
+        shutil.rmtree(extract_dir, ignore_errors=True)
+    except Exception as e:
+        print(f"\nError extracting FFmpeg: {e}")
+        if os.path.exists(extract_dir):
+            shutil.rmtree(extract_dir, ignore_errors=True)
+    finally:
+        try:
+            if os.path.exists(zip_path):
+                os.remove(zip_path)
+        except PermissionError:
+            print(f"\nCouldn't delete {zip_path}, it may be in use. You can delete it manually.")
 
     set_progress(0)
     print("\nFFmpeg ready")
