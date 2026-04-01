@@ -13,6 +13,7 @@ x ahora tengo(en orden de creacion):
   - usa random para un adivinador de una combinacion de caracteres(creado el 27/3/26)
   - testeo de cpp(creado el 25/3/26)
   - bruteforcer de contraseña(creado el 28/3/26)
+  - aimtrainer(creado el 1/4/26)
  ## FFmpeg
  yt-dw automatically downloads FFmpeg at runtime if it is not present.
  FFmpeg is licensed under the LGPL/GPL.

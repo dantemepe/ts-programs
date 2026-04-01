@@ -25,8 +25,8 @@ while True:
   att +=1
   gst = ""                    # establece un string vacio para despues añadirle caracteres
   for i in gspwo:             # por cada caracter que hay en guesspasword:
-    gst += lschr[i]           
-  if att % 123456 == 0:#  se le añade al string guesstotal el caracter correspondiente al valor del numero de la lista en el que esta (ej. esta en el quinto loop y se le añade esto y el valor del quinto caracter de la lista es 25, se le va a añadir z)
+    gst += lschr[i]           #  se le añade al string guesstotal el caracter correspondiente al valor del numero de la lista en el que esta (ej. esta en el quinto loop y se le añade esto y el valor del quinto caracter de la lista es 25, se le va a añadir z)
+  if att % 123456 == 0:
         spin_i += 1
         print("\rTrying:", gst, spinner[spin_i % 4], "Attempts:", att, end="")
 
