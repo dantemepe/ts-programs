@@ -16,6 +16,7 @@ x ahora tengo(en orden de creacion):
   - aimtrainer(creado el 1/4/26)
   - detectador de si un numbero es par o impar(creado el 17/4/26)
   - test de importar funciones de otros archivos(creado el 17/4/26)
+  - el coso de ataque del undertale(27/4/26)(requiere paquete "keyboard")
  ## FFmpeg
  yt-dw automatically downloads FFmpeg at runtime if it is not present.
  FFmpeg is licensed under the LGPL/GPL.
