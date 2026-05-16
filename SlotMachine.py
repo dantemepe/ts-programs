@@ -7,7 +7,7 @@ import time
 money = 150
 loans = 3
 firstSpin = True
-
+forcemode = False
 x = y = z = 0
 
 def clear():
@@ -64,6 +64,15 @@ while True:
                 sys.exit()
             else:
                 continue
+        elif start == 'force':
+            forcemode = True
+            vforce = input(f"?) ")
+            flist = [(vforce[0]), (vforce[1]), (vforce[2])]
+            print(flist[0],flist[1],flist[2])
+            xasd = input("")
+            x = flist[0]
+            y = flist[1]
+            z = flist[2]
         firstSpin = False
 
     if money < 10:
@@ -82,23 +91,42 @@ while True:
             print("You lose!")
             time.sleep(1)
             sys.exit()
-
+    if forcemode == True:
+        x = flist[0]
+        y = flist[1]
+        z = flist[2]
     money -= 10
+    if forcemode == True:
+        x = flist[0]
+        y = flist[1]
+        z = flist[2]
     animate_spin()
-    randomnums()
+    if forcemode == True:
+        pass
+    else:
+        randomnums()
+        pass
     clear()
+    if forcemode == True:
+        x = flist[0]
+        y = flist[1]
+        z = flist[2]
+    else:
+        pass
     smascii()
     dispmoney()
 
     winmsg = ""
 
-    if x == y == z == 7:
-        winmsg = " JACKPOT!! "
-        money *= 2
+    if x == y == z and z == '7':
+        winmsg = "JACKPOT!!"
+        money *= 7
     elif x == y == z:
         winmsg = "Three equal special!"
-        money = int(money * 1.65)
-
+        money *= 3
+    elif y == '0' and z == '0':
+        winmsg = "Multiple of 100!"
+        money *= 2
     if winmsg:
         print(winmsg)
         dispmoney()
